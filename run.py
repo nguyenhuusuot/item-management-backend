@@ -46,4 +46,4 @@ app.include_router(controller_auth.router)
 
 @app.get("/")
 def root():
-    return {"message": "Hello World! Cấu trúc dự án mới xịn xò."}
+    return {"message": "Hello World!"}

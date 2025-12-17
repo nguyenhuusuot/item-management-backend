@@ -3,7 +3,6 @@ from sqlalchemy.orm import Session
 from app import schemas, models
 from app.models import UserDB
 
-
 def create_item_by_id_user_service(db : Session, user_id : int, item : schemas.Item):
     db_user = db.query(UserDB).filter(UserDB.id == user_id).first()
     if db_user is None:

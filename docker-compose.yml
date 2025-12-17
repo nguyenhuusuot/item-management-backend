@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   #  Service 1: Database (Postgres) 
   db:
@@ -26,13 +24,10 @@ services:
     ports:
       - "8000:8000"
     environment:
-      # Database (Docker mạng nội bộ → dùng tên service)
+      # Database
       - DATABASE_URL=postgresql://postgres:admin123@db/appDB
-
-      # Redis (QUAN TRỌNG)
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-
       # Auth
       - SECRET_KEY=chuoi_bi_mat_sieu_kho_doan
       - ALGORITHM=HS256

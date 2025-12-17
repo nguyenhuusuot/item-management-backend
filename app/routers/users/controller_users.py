@@ -33,8 +33,6 @@ async def get_all_user(skip : int = 0, limit : int = 100 ,db: Session = Depends(
 # tìm id và trả về nếu không có thì trả về 404
 @router.get("/{user_id}", response_model=schemas.User_Schema)
 async def get_user_by_id(user_id: int, db : Session = Depends(database.get_db)):
-    # .filter(UserDB.id == user_id): Lọc theo điều kiện
-    # .filter(UserDB.id == user_id): Lọc theo điều kiện
     db_user = service_user.get_user_by_id_service(db = db,user_id=user_id)
 
     if db_user is None:

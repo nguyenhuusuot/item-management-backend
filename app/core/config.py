@@ -4,7 +4,7 @@ class Settings(BaseSettings):
     #Khai báo các biến cần lấy tên cần trùng với file .env
     DATABASE_URL: str
     SECRET_KEY: str
-    ALGORITHM: str = "HS256" # Có thể đặt giá trị mặc định
+    ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     REDIS_HOST: str = "localhost"
